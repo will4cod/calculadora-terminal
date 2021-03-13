@@ -1,5 +1,6 @@
 const prompt = require('prompt-sync')();
 const menuEscolha = require('./menu');
+const entradaUsuario = require('./entradaDados');
 let calculadora = require('./calculos');
 
 console.log('Bem vindo ao sistema\n');
@@ -7,7 +8,7 @@ console.log('Bem vindo ao sistema\n');
 let opcaoMenu = menuEscolha();
 
 while(opcaoMenu > 0){
-    if(opcaoMenu > 4){
+    if(opcaoMenu > 5){
         console.log('opção invalida');
         opcaoMenu = menuEscolha();
     }
@@ -31,6 +32,9 @@ while(opcaoMenu > 0){
         let num1 = Number(prompt('Digite o primeiro número: '));
         let num2 = Number(prompt('Digite o segundo número: '));
         console.log('Resultado da multiplicacao: ' + calculadora.multiplicacao(num1,num2));
+        break;
+    }else if(opcaoMenu == 5){
+        console.log('Resultado da média: ' + calculadora.media(entradaUsuario(opcaoMenu)));
         break;
     }
 
