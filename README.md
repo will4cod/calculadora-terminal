@@ -1,4 +1,4 @@
-# Calculador terminal 
+# Calculadora terminal 
 
 Calculadora por terminal, desenvolvida em **javascript** e utilizando a biblioteca prompt sync para interação com o usuário
 
